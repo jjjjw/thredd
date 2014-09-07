@@ -1,2 +1,4 @@
 node_modules/*
-!node_modules/threads/
+!node_modules/services/
+!node_modules/ui/
+!node_modules/views/

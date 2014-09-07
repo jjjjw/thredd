@@ -1,8 +1,8 @@
-var article = require('threads/schemas/article')
-  , comment = require('threads/schemas/comment')
-  , draft4 = require('threads/schemas/draft4')
+var article = require('services/schemas/article')
+  , comment = require('services/schemas/comment')
+  , draft4 = require('services/schemas/draft4')
   , test = require('tap').test
-  , user = require('threads/schemas/user')
+  , user = require('services/schemas/user')
   , ZSchema = require('z-schema')
   ;
 

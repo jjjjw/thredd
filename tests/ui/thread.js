@@ -1,4 +1,4 @@
-var Thread = require('threads/ui/thread').Thread
+var Thread = require('ui/thread').Thread
   , React = require('react')
   , test = require('tap').test
   ;

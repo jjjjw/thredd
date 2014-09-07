@@ -1,4 +1,4 @@
-var Comment = require('threads/ui/thread').Comment
+var Comment = require('ui/thread').Comment
   , React = require('react')
   , test = require('tap').test
   ;

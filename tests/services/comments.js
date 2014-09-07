@@ -1,6 +1,6 @@
-var coll = require('threads/collections/comments')
-  , comments = require('threads/services/comments')
-  , db = require('threads/collections/db')
+var coll = require('services/collections/comments')
+  , comments = require('services/comments')
+  , db = require('services/collections/db')
   , test = require('tap').test
   ;
 

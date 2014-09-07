@@ -1,7 +1,7 @@
-var users = require('threads/services/users')
-  coll = require('threads/collections/users')
-  , db = require('threads/collections/db')
+var coll = require('services/collections/users')
+  , db = require('services/collections/db')
   , test = require('tap').test
+  , users = require('services/users')
   ;
 
 test('users.get(query)', function (tap) {

@@ -1,6 +1,6 @@
-var articles = require('threads/services/articles')
-  coll = require('threads/collections/articles')
-  , db = require('threads/collections/db')
+var articles = require('services/articles')
+  coll = require('services/collections/articles')
+  , db = require('services/collections/db')
   , test = require('tap').test
   ;
 
