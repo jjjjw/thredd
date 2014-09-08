@@ -13,15 +13,22 @@ test('thread html', function (tap) {
     comments: [{
       body: 'bodycat'
       , id: 'a1'
-      , user: 'usercat'
+      , user: 'idcat'
     },{
       body: 'bodycat'
       , id: 'a2'
-      , user: 'usercat'
+      , user: 'idcat'
     }]
+    , depth: 0
+    , users: {
+      idcat: {
+        name: 'namecat'
+      }
+    }
   });
   var threadHTML = React.renderComponentToString(thread);
   tap.ok(threadHTML.indexOf('bodycat') > -1, 'renders attribute');
-  tap.ok(threadHTML.indexOf('usercat') > -1, 'renders attribute');
+  tap.ok(threadHTML.indexOf('namecat') > -1, 'renders attribute');
+  tap.ok(threadHTML.indexOf('thread-depth-0') > -1, 'renders depth');
   tap.end();
 });

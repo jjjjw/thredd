@@ -20,6 +20,24 @@ test('users.get(query)', function (tap) {
   });
 });
 
+test('users.getForComments(commentsList)', function (tap) {
+   users.post({
+    name: 'namecat'
+   }).then(function (newUser) {
+    return users.getForComments([{
+      article: 'idcat'
+      , body: 'bodycat'
+      , user : newUser.id
+    }]);
+  }).then(function (userList) {
+    tap.ok(userList.length, 'returns a user list');
+    tap.ok(userList[0].name === 'namecat', 'gets the related users');
+    return coll.remove({});
+  }).then(function () {
+    tap.end();
+  });
+});
+
 test('users.post(validObj)', function (tap) {
   users.post({
     name: 'namecat'

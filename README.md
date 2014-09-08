@@ -2,4 +2,4 @@
 
 ## Wut?
 
-Hacking with React, Koa, and other party animals.
+Hacking with React, Koa, Tap, and other party animals.

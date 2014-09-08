@@ -10,16 +10,23 @@ test('new Comment()', function (tap) {
 
 test('comment html', function (tap) {
   var comment = new Comment({
-    body: 'bodycat'
-    , user: 'idcat'
-    , children: [{
-      body: 'replycat'
-      , user: 'usercat '
-    }]
+    comment: {
+      body: 'bodycat'
+      , user: 'idcat'
+      , thread: [{
+        body: 'replycat'
+        , user: 'idcat'
+      }]
+    }
+    , users: {
+      idcat: {
+        name: 'namecat'
+      }
+    }
   });
   var commentHTML = React.renderComponentToString(comment);
   tap.ok(commentHTML.indexOf('bodycat') > -1, 'renders attribute');
-  tap.ok(commentHTML.indexOf('idcat') > -1, 'renders attribute');
+  tap.ok(commentHTML.indexOf('namecat') > -1, 'renders attribute');
   tap.ok(commentHTML.indexOf('replycat') > -1, 'renders attribute');
   tap.end();
 });
