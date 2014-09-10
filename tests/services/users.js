@@ -1,5 +1,5 @@
-var coll = require('services/collections/users')
-  , db = require('services/collections/db')
+var coll = require('services/collections').users
+  , db = require('services/collections').db
   , test = require('tap').test
   , users = require('services/users')
   ;

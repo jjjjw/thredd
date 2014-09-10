@@ -20,6 +20,8 @@
   },
   "devDependencies": {
     "baconipsum": "^0.1.2",
+    "browserify": "^5.11.1",
+    "less": "^1.7.5",
     "supertest": "^0.13.0",
     "tap": "^0.4.12"
   },

@@ -1,7 +1,7 @@
-var articles = require('services/collections/articles')
-  , comments = require('services/collections/comments')
-  , db = require('services/collections/db')
-  , users = require('services/collections/users')
+var articles = require('services/collections').articles
+  , comments = require('services/collections').comments
+  , db = require('services/collections').db
+  , users = require('services/collections').users
 
 articles.remove({})
 .then(function () {

@@ -1,27 +1,8 @@
 var articles = require('services/articles')
-  coll = require('services/collections/articles')
-  , db = require('services/collections/db')
+  , coll = require('services/collections').articles
+  , db = require('services/collections').db
   , test = require('tap').test
   ;
-
-// test('articles.generateArticle()', function (tap) {
-//   articles.generateArticle().then(function (newArticle) {
-//     tap.ok(newArticle, 'creates a comment');
-//     tap.ok(newArticle.id, 'creates an id');
-//     return coll.remove({});
-//   }).then(function () {
-//     tap.end();
-//   });
-// });
-
-// test('articles.get({ _id: nonexistingId })', function (tap) {
-//   articles.get({ _id: coll.id()}).then(function (results) {
-//     tap.ok(results[0].id, 'generates a new article if none exists');
-//     return coll.remove({});
-//   }).then(function () {
-//     tap.end();
-//   });
-// });
 
 test('articles.get(query)', function (tap) {
   articles.post({
@@ -66,4 +47,3 @@ test('articles.post(invalidObj)', function (tap) {
     tap.end();
   });
 });
-

@@ -2,7 +2,7 @@
 var articles = require('services/articles')
   , comments = require('services/comments')
   , bacon = require('baconipsum')
-  , db = require('services/collections/db')
+  , db = require('services/collections').db
   , users = require('services/users')
   ;
 
