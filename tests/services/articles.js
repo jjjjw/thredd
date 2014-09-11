@@ -9,15 +9,15 @@ test('articles.get(query)', function (tap) {
     title: 'idcat'
     , body: 'bodycat'
   }).then(function (newArticle) {
-    return articles.get({
-      _id: newArticle._id
-    });
+    return articles.get(newArticle.id);
   }).then(function (results) {
     var existingArticle = results[0];
     tap.ok(existingArticle, 'fetches an article');
     return coll.remove({});
   }).then(function () {
     tap.end();
+  }, function (err) {
+    console.log(err)
   });
 });
 

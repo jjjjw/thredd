@@ -16,15 +16,19 @@ test('transforms.threadify([])', function (tap) {
 
 test('transforms.threadify(commentsList)', function (tap) {
   var thread = transforms.threadify([{
-    createdAt: 1
+    createdAt: 2
     , id: 'parentcat'
   }, {
-    createdAt: 2
+    createdAt: 3
     , id: 'childcat'
     , parent: 'parentcat'
+  }, {
+    createdAt: 1
+    , id: 'lastcat'
   }]);
-  tap.ok(thread.length === 1, 'has comments');
+  tap.ok(thread.length === 2, 'has comments');
   tap.ok(thread[0].id === 'parentcat', 'has a top level comment');
   tap.ok(thread[0].thread[0].id === 'childcat', 'has a reply level comment');
+  tap.ok(thread[1].id === 'lastcat', 'orders from most newest to oldest');
   tap.end();
 });

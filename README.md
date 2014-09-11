@@ -6,23 +6,33 @@ Hacking with React, Koa, Tap, and other party animals.
 
 ## TODOS
 
+- [ ] Animations
+- [x] Store/View
 - [ ] Post
 - [ ] Reply
-- [ ] Animations
-- [ ] Choose username
+- [ ] User login/logout
 - [ ] View user comments
 - [ ] View articles at index
-- [ ] User login/logout
+- [x] Optimistic post
 - [ ] Flesh out README
 - [ ] Add License
 - [ ] Production Build
 - [ ] Realtime updates
+- [x] Debug very deep nesting
 - [ ] Debug tap & monk db.close()
 - [ ] Debug tap & node --harmony
 
 ## Wish list
 
-- [ ] services can do get/post via batch
+- [x] listify
+- [x] recordToJSON
+- [x] data is shipped as lists
+- [x] services get by id
+- [x] services can do get/post via batch
 - [ ] article view + comments subview
-- [ ] thread has a default depth of 0
-- [ ] rename app -> comments
+- [x] rename app -> article-comments
+- [ ] polyfill Custom Event
+- [x] use superagent for xbrowser
+- [ ] mv schemas and transforms
+- [ ] Thread naming
+- [ ] Commentor naming

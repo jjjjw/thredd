@@ -8,9 +8,7 @@ test('users.get(query)', function (tap) {
   users.post({
     name: 'namecat'
   }).then(function (newUser) {
-    return users.get({
-      _id: newUser._id
-    });
+    return users.get(newUser.id);
   }).then(function (results) {
     var fetchedUser = results[0];
     tap.ok(fetchedUser, 'gets a comment');
@@ -35,6 +33,8 @@ test('users.getForComments(commentsList)', function (tap) {
     return coll.remove({});
   }).then(function () {
     tap.end();
+  }, function (err) {
+    console.log(err.stack);
   });
 });
 

@@ -10,15 +10,15 @@ test('comments.get(query)', function (tap) {
     , body: 'bodycat'
     , user : 'idcat'
   }).then(function (newComment) {
-    return comments.get({
-      _id: newComment._id
-    });
+    return comments.get(newComment.id);
   }).then(function (results) {
     var fetchedComment = results[0];
     tap.ok(fetchedComment, 'gets a comment');
     return coll.remove({});
   }).then(function () {
     tap.end();
+  }, function (err) {
+    console.log(err);
   });
 });
 
@@ -29,15 +29,17 @@ test('comments.getForArticles(article)', function (tap) {
     , body: 'bodycat'
     , user : 'idcat'
   }).then(function (newComment) {
-    return comments.getForArticles([{
+    return comments.getForArticles({
       id: articleId
-    }]);
+    });
   }).then(function (comments) {
     tap.ok(comments, 'gets comments');
     tap.ok(comments[0].body === 'bodycat', 'gets the relevant comments');
     return coll.remove({});
   }).then(function () {
     tap.end();
+  }, function (err) {
+    console.log(err);
   });
 });
 

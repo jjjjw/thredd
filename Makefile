@@ -6,8 +6,8 @@ cleardb:
 	node --harmony ./bin/clear-articles
 
 dist:
-	node $(NPM_BIN)/browserify ./node_modules/app/javascripts/main.js > ./public/dist/app.js
-	node $(NPM_BIN)/lessc ./node_modules/app/styles/style.less > ./public/dist/style.css
+	node $(NPM_BIN)/browserify ./node_modules/article-comments/javascripts/main.js > ./public/dist/app.js
+	node $(NPM_BIN)/lessc ./node_modules/article-comments/styles/style.less > ./public/dist/style.css
 
 install:
 	npm install
