@@ -15,11 +15,13 @@ test('transforms.threadify([])', function (tap) {
 });
 
 test('transforms.threadify(commentsList)', function (tap) {
-  var thread = transforms.threadify([{
+  var testObj = {
     createdAt: 2
     , id: 'parentcat'
-  }, {
-    createdAt: 3
+  };
+  var thread = transforms.threadify([
+    testObj
+  , { createdAt: 3
     , id: 'childcat'
     , parent: 'parentcat'
   }, {
@@ -30,5 +32,6 @@ test('transforms.threadify(commentsList)', function (tap) {
   tap.ok(thread[0].id === 'parentcat', 'has a top level comment');
   tap.ok(thread[0].thread[0].id === 'childcat', 'has a reply level comment');
   tap.ok(thread[1].id === 'lastcat', 'orders from most newest to oldest');
+  tap.ok(thread[0] !== testObj, 'clones the comments');
   tap.end();
 });
