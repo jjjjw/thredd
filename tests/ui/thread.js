@@ -26,9 +26,9 @@ test('thread html', function (tap) {
       }
     }
   });
-  var threadHTML = React.renderComponentToString(thread);
-  tap.ok(threadHTML.indexOf('bodycat') > -1, 'renders attribute');
-  tap.ok(threadHTML.indexOf('namecat') > -1, 'renders attribute');
-  tap.ok(threadHTML.indexOf('thread-depth-0') > -1, 'renders depth');
+  var threadHtml = React.renderComponentToString(thread);
+  tap.ok(threadHtml.indexOf('bodycat') > -1, 'renders attribute');
+  tap.ok(threadHtml.indexOf('namecat') > -1, 'renders attribute');
+  tap.ok(threadHtml.indexOf('thread-depth-0') > -1, 'renders depth');
   tap.end();
 });

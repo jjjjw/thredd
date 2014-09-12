@@ -6,19 +6,24 @@ Hacking with React, Koa, Tap, and other party animals.
 
 ## TODOS
 
-- [ ] Animations
+- [x] Astroturf
 - [x] Store/View
-- [ ] Post
-- [ ] Reply
+- [x] Post
+- [x] Reply
+- [x] View user comments
+- [x] View articles at index
+- [ ] Beautify
+- [ ] Comment Timestamps/hash fragments
 - [ ] User login/logout
-- [ ] View user comments
-- [ ] View articles at index
+- [ ] Emoji/markdown support
+- [ ] Animations
 - [x] Optimistic post
 - [ ] Flesh out README
 - [ ] Add License
+- [ ] logging
 - [ ] Production Build
-- [ ] Realtime updates
-- [x] Debug very deep nesting
+- [ ] Stream
+- [ ] Commit Monk changes
 - [ ] Debug tap & monk db.close()
 - [ ] Debug tap & node --harmony
 
@@ -29,10 +34,15 @@ Hacking with React, Koa, Tap, and other party animals.
 - [x] data is shipped as lists
 - [x] services get by id
 - [x] services can do get/post via batch
+- [x] strip _ids
+- [x] tests
 - [ ] article view + comments subview
+- [x] data is shipped without _id
 - [x] rename app -> article-comments
 - [ ] polyfill Custom Event
 - [x] use superagent for xbrowser
-- [ ] mv schemas and transforms
+- [x] mv schemas and transforms
 - [ ] Thread naming
-- [ ] Commentor naming
+- [x] Editor naming
+- [x] getFor... accepts id list
+- [ ] awkward koa views and errors

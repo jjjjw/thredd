@@ -23,7 +23,7 @@ test('/articles/existing', function (tap) {
     , title: 'title'
   })
   .then(function (article) {
-    request.get('/articles/' + article.id).end(function (err, response) {
+    request.get('/articles/' + article[0].id).end(function (err, response) {
       tap.ok(response.status === 200, 'is 200');
       tap.ok(response.text.indexOf('bacon') >= -1, 'has bacon');
       articlesColl.remove({}).then(function () {

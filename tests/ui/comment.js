@@ -24,9 +24,9 @@ test('comment html', function (tap) {
       }
     }
   });
-  var commentHTML = React.renderComponentToString(comment);
-  tap.ok(commentHTML.indexOf('bodycat') > -1, 'renders attribute');
-  tap.ok(commentHTML.indexOf('namecat') > -1, 'renders attribute');
-  tap.ok(commentHTML.indexOf('replycat') > -1, 'renders attribute');
+  var commentHtml = React.renderComponentToString(comment);
+  tap.ok(commentHtml.indexOf('bodycat') > -1, 'renders attribute');
+  tap.ok(commentHtml.indexOf('namecat') > -1, 'renders attribute');
+  tap.ok(commentHtml.indexOf('replycat') > -1, 'renders attribute');
   tap.end();
 });

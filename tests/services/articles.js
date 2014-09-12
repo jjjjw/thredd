@@ -4,20 +4,23 @@ var articles = require('services/articles')
   , test = require('tap').test
   ;
 
-test('articles.get(query)', function (tap) {
+test('articles.get(id)', function (tap) {
   articles.post({
     title: 'idcat'
     , body: 'bodycat'
-  }).then(function (newArticle) {
-    return articles.get(newArticle.id);
-  }).then(function (results) {
+  })
+  .then(function (newArticles) {
+    return articles.get(newArticles[0].id);
+  })
+  .then(function (results) {
     var existingArticle = results[0];
     tap.ok(existingArticle, 'fetches an article');
     return coll.remove({});
-  }).then(function () {
+  })
+  .then(function () {
     tap.end();
   }, function (err) {
-    console.log(err)
+    console.log(err.stack)
   });
 });
 
@@ -25,25 +28,33 @@ test('articles.post(validObj)', function (tap) {
   articles.post({
     title: 'idcat'
     , body: 'bodycat'
-  }).then(function (newArticle) {
+  })
+  .then(function (newArticle) {
     tap.ok(newArticle, 'creates a comment');
-    tap.ok(newArticle.id, 'creates an id');
+    tap.ok(newArticle[0].id, 'creates an id');
     return coll.remove({});
-  }).then(function () {
+  })
+  .then(function () {
     tap.end();
+  }, function (err) {
+    console.log(err.stack)
   });
 });
 
 test('articles.post(invalidObj)', function (tap) {
   articles.post({
     body : 'bodycat'
-  }).then(function () {
+  })
+  .then(function () {
     tap.notOk(true, 'should not be valid');
   }, function (err) {
     tap.ok(err.code === 'OBJECT_MISSING_REQUIRED_PROPERTY', 'invalid');
     return coll.remove({});
-  }).then(function () {
+  })
+  .then(function () {
     db.close();
     tap.end();
+  }, function (err) {
+    console.log(err.stack)
   });
 });
