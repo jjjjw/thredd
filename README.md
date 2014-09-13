@@ -12,11 +12,9 @@ Hacking with React, Koa, Tap, and other party animals.
 - [x] Reply
 - [x] View user comments
 - [x] View articles at index
-- [ ] Beautify
+- [x] Beautify
 - [x] Comment Timestamps/hash fragments
 - [ ] User login/logout
-- [ ] Emoji/markdown support
-- [ ] Animations
 - [ ] Optimistic post
 - [ ] Flesh out README
 - [ ] Add License
@@ -46,3 +44,5 @@ Hacking with React, Koa, Tap, and other party animals.
 - [x] Editor naming
 - [x] getFor... accepts id list
 - [x] no awkward koa errors
+- [ ] Emoji/markdown support
+- [ ] Animations
