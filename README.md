@@ -13,11 +13,11 @@ Hacking with React, Koa, Tap, and other party animals.
 - [x] View user comments
 - [x] View articles at index
 - [ ] Beautify
-- [ ] Comment Timestamps/hash fragments
+- [x] Comment Timestamps/hash fragments
 - [ ] User login/logout
 - [ ] Emoji/markdown support
 - [ ] Animations
-- [x] Optimistic post
+- [ ] Optimistic post
 - [ ] Flesh out README
 - [ ] Add License
 - [ ] logging
@@ -35,14 +35,14 @@ Hacking with React, Koa, Tap, and other party animals.
 - [x] services get by id
 - [x] services can do get/post via batch
 - [x] strip _ids
-- [x] tests
+- [ ] moar tests
 - [ ] article view + comments subview
 - [x] data is shipped without _id
 - [x] rename app -> article-comments
-- [ ] polyfill Custom Event
+- [x] polyfill Custom Event
 - [x] use superagent for xbrowser
 - [x] mv schemas and transforms
 - [ ] Thread naming
 - [x] Editor naming
 - [x] getFor... accepts id list
-- [ ] awkward koa views and errors
+- [x] no awkward koa errors

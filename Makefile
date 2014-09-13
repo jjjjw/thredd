@@ -23,7 +23,7 @@ tests:
 	node --harmony $(NPM_BIN)/tap tests/services/*.js tests/ui/*.js tests/transforms/*.js tests/schemas/*.js tests/server/helpers.js
 
 tests/server:
-	node --harmony tests/server/*.js
+	node --harmony tests/server/index.js
 
 # TODO: clean
 # for package in `npm ls`; do npm uninstall $package; done;

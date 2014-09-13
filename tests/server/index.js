@@ -11,8 +11,9 @@ var request = require('supertest').agent(app.listen());
 
 test('/articles/nonexisting', function (tap) {
   request.get('/articles/' + articlesColl.id()).end(function (err, response) {
+    console.log(response.text)
     tap.ok(response.status === 404, 'is 404');
-    tap.ok(response.text === 'No bacon', 'has no bacon');
+    tap.ok(response.text === 'Not Found', 'not found');
     tap.end();
   });
 });
@@ -49,4 +50,20 @@ test('/comments/', function (tap) {
         tap.end();
       });
     });
+});
+
+test('/user/existing', {skip: true}, function (tap) {
+  // TODO
+});
+
+test('/user/notexisting', {skip: true}, function (tap) {
+  // TODO
+});
+
+test('/user/existing/comments', {skip: true}, function (tap) {
+  // TODO
+});
+
+test('/user/notexisting/comments', {skip: true}, function (tap) {
+  // TODO
 });

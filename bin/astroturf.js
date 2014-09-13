@@ -17,7 +17,7 @@ function astroturf () {
     , title: bacon(5)
   };
 
-  var users = ['Fry', 'Babe', 'Winston Churchill'].map(function (name) {
+  var users = ['Babe', 'Fry', 'Winston Churchill', 'Wilbur'].map(function (name) {
     return {
       name: name
     };

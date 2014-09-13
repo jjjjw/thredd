@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "co-body": "^1.0.0",
+    "custom-event-polyfill": "^0.1.1",
     "koa": "^0.10.0",
     "koa-route": "^2.1.0",
     "koa-static": "^1.4.6",
