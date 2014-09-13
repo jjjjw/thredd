@@ -9,9 +9,16 @@ var app = require('server')
 
 var request = require('supertest').agent(app.listen());
 
+test('/', {skip: true}, function (tap) {
+  // TODO
+});
+
+test('/articles', {skip: true}, function (tap) {
+  // TODO
+});
+
 test('/articles/nonexisting', function (tap) {
   request.get('/articles/' + articlesColl.id()).end(function (err, response) {
-    console.log(response.text)
     tap.ok(response.status === 404, 'is 404');
     tap.ok(response.text === 'Not Found', 'not found');
     tap.end();
