@@ -3,8 +3,11 @@ var articles = require('services/articles')
   , commentsSvc = require('services/comments')
   , bacon = require('baconipsum')
   , db = require('services/collections').db
+  , Showdown = require('showdown')
   , usersSvc = require('services/users')
   ;
+
+var converter = new Showdown.converter();
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/randoms
 function getRandomInt (min, max) {
@@ -13,7 +16,7 @@ function getRandomInt (min, max) {
 
 function astroturf () {
   var article = {
-    body: '<p>' + bacon(250).replace('\n', '<p>')
+    body: converter.makeHtml(bacon(250))
     , title: bacon(5)
   };
 

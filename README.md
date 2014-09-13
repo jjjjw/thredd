@@ -20,7 +20,6 @@ Hacking with React, Koa, Tap, and other party animals.
 - [ ] Add License
 - [ ] logging
 - [ ] Production Build
-- [ ] Stream
 - [ ] Commit Monk changes
 - [ ] Debug tap & monk db.close()
 - [ ] Debug tap & node --harmony
@@ -44,5 +43,8 @@ Hacking with React, Koa, Tap, and other party animals.
 - [x] Editor naming
 - [x] getFor... accepts id list
 - [x] no awkward koa errors
-- [ ] Emoji/markdown support
+- [ ] no awkward koa views
+- [ ] Emoji support
+- [ ] Markdown support
 - [ ] Animations
+- [ ] Stream
