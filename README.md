@@ -14,15 +14,11 @@ Hacking with React, Koa, Tap, and other party animals.
 - [x] View articles at index
 - [x] Beautify
 - [x] Comment Timestamps/hash fragments
-- [ ] User login/logout
+- [ ] moar tests
 - [ ] Optimistic post
-- [ ] Flesh out README
+- [ ] Flesh out README/index page
 - [ ] Add License
-- [ ] logging
 - [ ] Production Build
-- [ ] Commit Monk changes
-- [ ] Debug tap & monk db.close()
-- [ ] Debug tap & node --harmony
 
 ## Wish list
 
@@ -32,19 +28,22 @@ Hacking with React, Koa, Tap, and other party animals.
 - [x] services get by id
 - [x] services can do get/post via batch
 - [x] strip _ids
-- [ ] moar tests
-- [ ] article view + comments subview
 - [x] data is shipped without _id
 - [x] rename app -> article-comments
 - [x] polyfill Custom Event
 - [x] use superagent for xbrowser
 - [x] mv schemas and transforms
-- [ ] Thread naming
 - [x] Editor naming
 - [x] getFor... accepts id list
 - [x] no awkward koa errors
-- [ ] no awkward koa views
-- [ ] Emoji support
-- [ ] Markdown support
 - [ ] Animations
+- [ ] Markdown support
+- [ ] no awkward koa views
+- [ ] Thread naming
+- [ ] error handling
 - [ ] Stream
+- [ ] User login/logout
+- [ ] logging
+- [ ] Commit Monk changes
+- [ ] Debug tap & monk db.close()
+- [ ] Debug tap & node --harmony
