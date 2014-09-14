@@ -43,7 +43,7 @@ Most key business logic is implemented by functions. For example, the code that 
 - [ ] error handling
 - [ ] logging
 - [ ] Optimistic post
-- [ ] Animations
+- [x] Animations
 - [ ] User login/logout
 - [ ] pretty URLs
 - [ ] Stream
