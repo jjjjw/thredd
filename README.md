@@ -48,6 +48,7 @@ Most key business logic is implemented by functions. For example, the code that 
 - [ ] pretty URLs
 - [ ] Stream
 - [ ] Markdown support
+- [ ] browser tests
 - [x] Commit Monk changes
 - [ ] Debug tap & monk db.close()
 - [ ] Debug tap & node --harmony

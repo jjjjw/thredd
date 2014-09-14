@@ -14,3 +14,7 @@ test('Editor html', function (tap) {
   tap.ok(editorHTML.indexOf('textarea') > -1, 'renders textarea');
   tap.end();
 });
+
+test('focuses iff there is a parent', {skip: true } ,function (tap) {
+  // TODO: browser tests
+});
