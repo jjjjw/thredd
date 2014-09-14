@@ -21,13 +21,14 @@ Hacking with React, Koa, Tap, and other party animals.
 
 ## Wish list
 
-- [ ] Optimistic post
 - [ ] Thread naming
 - [ ] no awkward koa views
 - [ ] error handling
+- [ ] logging
+- [ ] Optimistic post
 - [ ] Animations
 - [ ] User login/logout
-- [ ] logging
+- [ ] pretty URLs
 - [ ] Stream
 - [ ] Markdown support
 - [ ] Commit Monk changes

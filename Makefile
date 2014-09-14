@@ -11,6 +11,7 @@ cleardb:
 dist:
 	node $(NPM_BIN)/browserify ./node_modules/article-comments/javascripts/main.js > ./public/dist/app.js
 	node $(NPM_BIN)/lessc ./node_modules/article-comments/styles/style.less > ./public/dist/style.css
+	node $(NPM_BIN)/lessc ./node_modules/article-comments/styles/user-comments.less > ./public/dist/user-comments.css
 
 install:
 	npm install
