@@ -20,7 +20,7 @@ function astroturf () {
     , title: bacon(getRandomInt(1, 5))
   };
 
-  var users = ['Babe', 'Fry', 'Winston Churchill', 'Wilbur'].map(function (name) {
+  var users = ['Babe', 'Fry', 'Wilbur', 'Winston Churchill'].map(function (name) {
     return {
       name: name
     };
