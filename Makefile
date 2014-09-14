@@ -2,7 +2,10 @@
 
 NPM_BIN=$(shell npm bin)
 
-clear-db:
+astroturf:
+	node --harmony ./bin/astroturf
+
+cleardb:
 	node --harmony ./bin/clear-db
 
 dist:
@@ -12,11 +15,8 @@ dist:
 install:
 	npm install
 
-astroturf:
-	node --harmony ./bin/astroturf
-
 server: dist
-	node --harmony node_modules/server
+	node --harmony ./node_modules/server
 
 # TODO: the tap test runner doesn't spawn child processes with node flags(?)
 tests:
