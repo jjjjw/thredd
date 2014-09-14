@@ -9,6 +9,7 @@ cleardb:
 	node --harmony ./bin/clear-db
 
 dist:
+	mkdir -p public/dist
 ifeq ($(NODE_ENV), production)
 	$(MAKE) dist/production
 else
