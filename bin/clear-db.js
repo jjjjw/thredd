@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var articles = require('services/collections').articles
   , comments = require('services/collections').comments
   , db = require('services/collections').db

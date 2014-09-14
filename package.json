@@ -19,7 +19,7 @@
     "koa-route": "^2.1.0",
     "koa-static": "^1.4.6",
     "less": "^1.7.5",
-    "monk": "git+ssh://git@github.com:zjjw/monk.git#always_array",
+    "monk": "zjjw/monk.git#always_array",
     "mustache": "^0.8.2",
     "react": "^0.11.1",
     "showdown": "^0.3.1",
