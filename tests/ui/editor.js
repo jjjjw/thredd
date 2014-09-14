@@ -19,6 +19,14 @@ test('focuses iff there is a parent', {skip: true } ,function (tap) {
   // TODO: browser tests
 });
 
+test('hides on success if has hide', {skip: true } ,function (tap) {
+  // TODO: browser tests
+});
+
+test('blurs on success if no hide', {skip: true } ,function (tap) {
+  // TODO: browser tests
+});
+
 test('displays errors', {skip: true } ,function (tap) {
   // TODO: browser tests
 });
