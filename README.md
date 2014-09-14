@@ -2,7 +2,7 @@
 
 ## About
 
-Thredd is a minimalistic web app that stores and displays articles and their comment sections. Articles consist of a title and body. Comment sections consist of comments and their nested replies. Replies can be nested *ad infinitum*! Check it out on heroku *here*.
+Thredd is a minimalistic web app that stores and displays articles and their comment sections. Articles consist of a title and body. Comment sections consist of comments and their nested replies. Replies can be nested *ad infinitum*! Check it out on heroku [here](http://thredd.herokuapp.com/).
 
 For the good times, press cmd + enter when entering a comment to post it quickly!
 
@@ -54,3 +54,4 @@ Most key business logic is implemented by functions. For example, the code that 
 - [ ] Commit Monk changes (git grep for ZJJ)
 - [ ] Debug tap & monk db.close()
 - [ ] Debug tap & node --harmony
+- [ ] Debug "Failed to load c++ bson extension, using pure JS version"
