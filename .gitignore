@@ -4,7 +4,7 @@ node_modules/*
 !node_modules/schemas/
 !node_modules/server/
 !node_modules/services/
-!node_modules/transformers/
+!node_modules/transforms/
 !node_modules/ui/
 !node_modules/views/
 public/dist
