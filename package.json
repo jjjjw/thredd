@@ -1,26 +1,38 @@
 {
-  "name": "threads",
+  "name": "Thredd",
   "version": "0.0.0-alpha",
   "description": "Rad threads",
-  "main": "index.js",
+  "main": "node_modules/server/index.js",
   "scripts": {
+    "start": "make server",
     "test": "make test"
   },
   "author": "zjj",
   "license": "ISC",
   "dependencies": {
     "baconipsum": "^0.1.2",
+    "browserify": "^5.11.1",
+    "co-body": "^1.0.0",
+    "custom-event-polyfill": "^0.1.1",
+    "envify": "^3.0.0",
     "koa": "^0.10.0",
     "koa-route": "^2.1.0",
+    "koa-static": "^1.4.6",
+    "less": "^1.7.5",
     "monk": "^0.9.0",
     "mustache": "^0.8.2",
     "react": "^0.11.1",
+    "showdown": "^0.3.1",
+    "superagent": "^0.18.2",
+    "uglify-js": "^2.4.15",
     "z-schema": "^3.0.0"
   },
   "devDependencies": {
+    "sinon": "^1.10.3",
+    "supertest": "^0.13.0",
     "tap": "^0.4.12"
   },
   "engines": {
-    "node": ">= 0.11.9"
+    "node": ">= 0.11.13"
   }
 }

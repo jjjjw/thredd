@@ -1,4 +1,4 @@
-var Thread = require('threads/ui/thread').Thread
+var Thread = require('ui/thread').Thread
   , React = require('react')
   , test = require('tap').test
   ;
@@ -13,15 +13,22 @@ test('thread html', function (tap) {
     comments: [{
       body: 'bodycat'
       , id: 'a1'
-      , user: 'usercat'
+      , user: 'idcat'
     },{
       body: 'bodycat'
       , id: 'a2'
-      , user: 'usercat'
+      , user: 'idcat'
     }]
+    , depth: 0
+    , users: {
+      idcat: {
+        name: 'namecat'
+      }
+    }
   });
-  var threadHTML = React.renderComponentToString(thread);
-  tap.ok(threadHTML.indexOf('bodycat') > -1, 'renders attribute');
-  tap.ok(threadHTML.indexOf('usercat') > -1, 'renders attribute');
+  var threadHtml = React.renderComponentToString(thread);
+  tap.ok(threadHtml.indexOf('bodycat') > -1, 'renders attribute');
+  tap.ok(threadHtml.indexOf('namecat') > -1, 'renders attribute');
+  tap.ok(threadHtml.indexOf('thread-depth-0') > -1, 'renders depth');
   tap.end();
 });

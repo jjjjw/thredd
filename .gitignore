@@ -1,2 +1,10 @@
 node_modules/*
-!node_modules/threads/
+!node_modules/article-comments/
+!node_modules/monk/
+!node_modules/schemas/
+!node_modules/server/
+!node_modules/services/
+!node_modules/transforms/
+!node_modules/ui/
+!node_modules/views/
+public/dist

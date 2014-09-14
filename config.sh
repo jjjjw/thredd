@@ -1,5 +1,6 @@
-export ARTICLES_COLLECTION=test
-export COMMENTS_COLLECTION=test
+export ARTICLES_COLLECTION=testArticles
+export COMMENTS_COLLECTION=testComments
 export MONGO_URL=localhost/threads
+export NODE_ENV=development
 export PORT=8080
-export USERS_COLLECTION=test
+export USERS_COLLECTION=testUsers
