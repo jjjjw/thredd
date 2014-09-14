@@ -21,7 +21,7 @@ server: dist
 
 # TODO: the tap test runner doesn't spawn child processes with node flags(?)
 tests:
-	node --harmony $(NPM_BIN)/tap tests/services/*.js tests/ui/*.js tests/transforms/*.js tests/schemas/*.js tests/server/helpers.js
+	node --harmony $(NPM_BIN)/tap tests/services/*.js tests/ui/*.js tests/transforms/*.js tests/schemas/*.js tests/views/*.js
 
 tests/server:
 	node --harmony tests/server/index.js
