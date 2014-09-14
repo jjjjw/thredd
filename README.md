@@ -18,7 +18,7 @@ For the good times, press cmd + enter when entering a comment to post it quickly
 
 Thredd is implemented with some fun tech. The server is built with [Koa](http://koajs.com/) and the UI is built with [React](http://facebook.github.io/react/). Articles and comment sections are rendered server-side for speed.
 
-The entrypoint for the server is `node_modules/server/index`. Data modeling and persistence is handled by the services found in `node_modules/services`. The web views are found in `node_modules/views`.
+The entrypoint for the server is `node_modules/server/index`. Data modeling and persistence is handled by the services found in `node_modules/services`. There are indexes set on the `user` and `article` properties of comments for faster querying. Indexes are declared when the Mongo collections are loaded into the app, i.e., `node_modules/services/collections/index`. The web views are found in `node_modules/views`.
 
 The entrypoint for the client is `node_modules/article-comments/main`. The front-end app favors a functional reactive style. Code is organized into a `store` for data management and a `view` that rerenders when the store signals an update.
 
@@ -38,11 +38,8 @@ Most key business logic is implemented by functions. For example, the code that 
 - [x] moar tests
 - [x] Add License
 - [x] Production Build
-
-## Wish list
-
 - [ ] Thread naming
-- [ ] no awkward koa views
+- [x] no awkward koa views
 - [ ] error handling
 - [ ] logging
 - [ ] Optimistic post
@@ -51,7 +48,6 @@ Most key business logic is implemented by functions. For example, the code that 
 - [ ] pretty URLs
 - [ ] Stream
 - [ ] Markdown support
-- [ ] Commit Monk changes (git grep for ZJJ)
+- [x] Commit Monk changes
 - [ ] Debug tap & monk db.close()
 - [ ] Debug tap & node --harmony
-- [ ] Debug "Failed to load c++ bson extension, using pure JS version"
