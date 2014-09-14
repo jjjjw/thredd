@@ -1,9 +1,10 @@
 {
-  "name": "threads",
+  "name": "Thredd",
   "version": "0.0.0-alpha",
   "description": "Rad threads",
-  "main": "index.js",
+  "main": "node_modules/server/index.js",
   "scripts": {
+    "start": "make server",
     "test": "make test"
   },
   "author": "zjj",
@@ -29,6 +30,6 @@
     "tap": "^0.4.12"
   },
   "engines": {
-    "node": ">= 0.11.9"
+    "node": ">= 0.11.13"
   }
 }

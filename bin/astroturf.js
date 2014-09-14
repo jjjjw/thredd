@@ -17,7 +17,7 @@ function getRandomInt (min, max) {
 function astroturf () {
   var article = {
     body: converter.makeHtml(bacon(250))
-    , title: bacon(5)
+    , title: bacon(getRandomInt(1, 5))
   };
 
   var users = ['Babe', 'Fry', 'Winston Churchill', 'Wilbur'].map(function (name) {
