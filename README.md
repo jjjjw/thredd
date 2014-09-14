@@ -38,7 +38,7 @@ Most key business logic is implemented by functions. For example, the code that 
 - [x] moar tests
 - [x] Add License
 - [x] Production Build
-- [ ] Thread naming
+- [x] Comment.thread naming
 - [x] no awkward koa views
 - [ ] error handling
 - [ ] logging
