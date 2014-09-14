@@ -42,19 +42,9 @@ test('articles.post(validObj)', function (tap) {
 });
 
 test('articles.post(invalidObj)', function (tap) {
-  articles.post({
+  tap.throws(articles.post.bind(this, {
     body : 'bodycat'
-  })
-  .then(function () {
-    tap.notOk(true, 'should not be valid');
-  }, function (err) {
-    tap.ok(err.code === 'OBJECT_MISSING_REQUIRED_PROPERTY', 'invalid');
-    return coll.remove({});
-  })
-  .then(function () {
-    db.close();
-    tap.end();
-  }, function (err) {
-    console.log(err.stack)
-  });
+  }));
+  db.close();
+  tap.end();
 });

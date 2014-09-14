@@ -110,18 +110,7 @@ test('comments.post([validObj])', function (tap) {
 });
 
 test('comments.post(invalidObj)', function (tap) {
-  comments.post({
-    article: 'idcat'
-    , user : 'idcat'
-  })
-  .then(function () {
-    tap.notOk(true, 'should not be valid');
-  }, function (err) {
-    tap.ok(err.code === 'OBJECT_MISSING_REQUIRED_PROPERTY', 'invalid');
-    return coll.remove({});
-  })
-  .then(function () {
-    db.close();
-    tap.end();
-  });
+  tap.throws(comments.post.bind(this, {}));
+  db.close();
+  tap.end();
 });

@@ -41,16 +41,7 @@ test('users.post(validObj)', function (tap) {
 });
 
 test('users.post(invalidObj)', function (tap) {
-  users.post({}).then(function () {
-    tap.notOk(true, 'should not be valid');
-  }, function (err) {
-    tap.ok(err.code === 'OBJECT_MISSING_REQUIRED_PROPERTY', 'invalid');
-    return coll.remove({});
-  })
-  .then(function () {
-    db.close();
-    tap.end();
-  }, function (err) {
-    console.log(err.stack);
-  });
+  tap.throws(users.post.bind(this, {}));
+  db.close();
+  tap.end();
 });

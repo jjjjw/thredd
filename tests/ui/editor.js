@@ -18,3 +18,7 @@ test('Editor html', function (tap) {
 test('focuses iff there is a parent', {skip: true } ,function (tap) {
   // TODO: browser tests
 });
+
+test('displays errors', {skip: true } ,function (tap) {
+  // TODO: browser tests
+});
