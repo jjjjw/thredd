@@ -25,10 +25,12 @@
   "devDependencies": {
     "baconipsum": "^0.1.2",
     "browserify": "^5.11.1",
+    "envify": "^3.0.0",
     "less": "^1.7.5",
     "sinon": "^1.10.3",
     "supertest": "^0.13.0",
-    "tap": "^0.4.12"
+    "tap": "^0.4.12",
+    "uglify-js": "^2.4.15"
   },
   "engines": {
     "node": ">= 0.11.13"

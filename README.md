@@ -35,9 +35,9 @@ Most key business logic is implemented by functions. For example, the code that 
 - [x] View user comments
 - [x] View articles
 - [x] Comment timestamps/hash fragments
-- [ ] moar tests
+- [x] moar tests
 - [x] Add License
-- [ ] Production Build
+- [x] Production Build
 
 ## Wish list
 
