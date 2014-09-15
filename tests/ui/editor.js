@@ -30,3 +30,7 @@ test('blurs on success if no hide', {skip: true } ,function (tap) {
 test('displays errors', {skip: true } ,function (tap) {
   // TODO: browser tests
 });
+
+test('displays warnings', {skip: true } ,function (tap) {
+  // TODO: browser tests
+});
