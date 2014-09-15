@@ -42,6 +42,7 @@ Most key business logic is implemented by functions. For example, the code that 
 - [x] render views more efficiently
 - [x] user error message
 - [x] logging
+- [ ] User comments are rendered in the wrong time zone
 - [ ] Optimistic post
 - [x] Animations
 - [ ] User login/logout
