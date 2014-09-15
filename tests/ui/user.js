@@ -1,6 +1,6 @@
 var React = require('react')
   , test = require('tap').test
-  , User = require('ui/thread').User
+  , User = require('ui/user')
   ;
 
 test('new User()', function (tap) {
@@ -11,6 +11,6 @@ test('new User()', function (tap) {
 test('user html', function (tap) {
   var user = new User();
   var userHtml = React.renderComponentToString(user);
-  tap.ok(commentHtml.indexOf('Anonymous') > -1, 'defaults to anonymous');
+  tap.ok(userHtml.indexOf('Anonymous') > -1, 'defaults to anonymous');
   tap.end();
 });
