@@ -17,6 +17,7 @@
     "custom-event-polyfill": "^0.1.1",
     "envify": "^3.0.0",
     "koa": "^0.10.0",
+    "koa-logger": "^1.2.2",
     "koa-route": "^2.1.0",
     "koa-static": "^1.4.6",
     "less": "^1.7.5",

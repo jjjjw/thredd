@@ -39,9 +39,9 @@ Most key business logic is implemented by functions. For example, the code that 
 - [x] Add License
 - [x] Production Build
 - [x] Comment.thread naming
-- [ ] no awkward koa views
+- [ ] fix terrible use of views in koa-land
 - [x] user error message
-- [ ] logging
+- [x] logging
 - [ ] Optimistic post
 - [x] Animations
 - [ ] User login/logout
