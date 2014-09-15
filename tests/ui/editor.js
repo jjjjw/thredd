@@ -14,3 +14,23 @@ test('Editor html', function (tap) {
   tap.ok(editorHTML.indexOf('textarea') > -1, 'renders textarea');
   tap.end();
 });
+
+test('focuses iff there is a parent', {skip: true } ,function (tap) {
+  // TODO: browser tests
+});
+
+test('hides on success if has hide', {skip: true } ,function (tap) {
+  // TODO: browser tests
+});
+
+test('blurs on success if no hide', {skip: true } ,function (tap) {
+  // TODO: browser tests
+});
+
+test('displays errors', {skip: true } ,function (tap) {
+  // TODO: browser tests
+});
+
+test('displays warnings', {skip: true } ,function (tap) {
+  // TODO: browser tests
+});

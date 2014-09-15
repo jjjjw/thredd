@@ -23,6 +23,25 @@ test('users.get(query)', function (tap) {
   });
 });
 
+test('comments.getByName(name)', function (tap) {
+  users.post({
+    name: 'namecat'
+  })
+  .then(function (newUser) {
+    return users.getByName(newUser[0].name);
+  })
+  .then(function (results) {
+    var fetchedUser = results[0];
+    tap.ok(fetchedUser, 'gets a user');
+    tap.ok(fetchedUser.name === 'namecat', 'gets a user');
+    return coll.remove({});
+  })
+  .then(function () {
+    tap.end();
+  }, function (err) {
+    console.log(err.stack);
+  });
+});
 
 test('users.post(validObj)', function (tap) {
   users.post({
@@ -41,16 +60,7 @@ test('users.post(validObj)', function (tap) {
 });
 
 test('users.post(invalidObj)', function (tap) {
-  users.post({}).then(function () {
-    tap.notOk(true, 'should not be valid');
-  }, function (err) {
-    tap.ok(err.code === 'OBJECT_MISSING_REQUIRED_PROPERTY', 'invalid');
-    return coll.remove({});
-  })
-  .then(function () {
-    db.close();
-    tap.end();
-  }, function (err) {
-    console.log(err.stack);
-  });
+  tap.throws(users.post.bind(this, {}));
+  db.close();
+  tap.end();
 });

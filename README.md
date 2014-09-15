@@ -38,16 +38,17 @@ Most key business logic is implemented by functions. For example, the code that 
 - [x] moar tests
 - [x] Add License
 - [x] Production Build
-- [ ] Thread naming
-- [x] no awkward koa views
-- [ ] error handling
-- [ ] logging
+- [x] Comment.thread naming
+- [x] render views more efficiently
+- [x] user error message
+- [x] logging
 - [ ] Optimistic post
-- [ ] Animations
+- [x] Animations
 - [ ] User login/logout
 - [ ] pretty URLs
 - [ ] Stream
 - [ ] Markdown support
+- [ ] browser tests
 - [x] Commit Monk changes
 - [ ] Debug tap & monk db.close()
 - [ ] Debug tap & node --harmony

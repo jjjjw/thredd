@@ -30,7 +30,7 @@ test('transforms.threadify(commentsList)', function (tap) {
   }]);
   tap.ok(thread.length === 2, 'has comments');
   tap.ok(thread[0].id === 'parentcat', 'has a top level comment');
-  tap.ok(thread[0].thread[0].id === 'childcat', 'has a reply level comment');
+  tap.ok(thread[0].replies[0].id === 'childcat', 'has a reply level comment');
   tap.ok(thread[1].id === 'lastcat', 'orders from most newest to oldest');
   tap.ok(thread[0] !== testObj, 'clones the comments');
   tap.end();

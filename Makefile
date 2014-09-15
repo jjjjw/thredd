@@ -27,7 +27,10 @@ dist/development:
 dist/production: dist/development
 	$(NPM_BIN)/uglifyjs ./public/dist/app.js -o ./public/dist/app.js -m toplevel -c
 	du -h ./public/dist/app.js
-
+	$(NPM_BIN)/cleancss ./public/dist/style.css -o ./public/dist/style.css
+	du -h ./public/dist/style.css
+	$(NPM_BIN)/cleancss ./public/dist/user-comments.css -o ./public/dist/user-comments.css
+	du -h ./public/dist/user-comments.css
 
 install:
 	npm install
