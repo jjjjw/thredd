@@ -15,7 +15,6 @@ test('findById', function (tap) {
     tap.ok(res[0].a === 1, 'gets by id');
     tap.ok(res[0].id, 'has id');
     tap.notOk(res[0]._id, 'no _id');
-    console.log(res)
     return coll.remove({});
   })
   .then(function () {
@@ -44,7 +43,7 @@ test('findByField', function (tap) {
   });
 });
 
-test('validateAndSave', function (tap) {
+test('validateAndSave(valid)', function (tap) {
   helpers.validateAndSave({'name': 'a'}, schema, coll)
   .then(function (res) {
     tap.ok(res.length, 'inserts');
@@ -58,4 +57,10 @@ test('validateAndSave', function (tap) {
   }, function (err) {
     console.log(err.stack);
   });
+});
+
+test('validateAndSave(invalid)', function (tap) {
+  tap.throws(helpers.validateAndSave.bind(this, {}, schema, coll));
+  db.close();
+  tap.end();
 });

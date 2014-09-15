@@ -13,7 +13,7 @@ test('comment html', function (tap) {
     comment: {
       body: 'bodycat'
       , user: 'idcat'
-      , thread: [{
+      , replies: [{
         body: 'replycat'
         , user: 'idcat'
       }]
