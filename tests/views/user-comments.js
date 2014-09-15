@@ -1,4 +1,4 @@
-var userCommentsView = require('views/user-comments')
+var userComments = require('views/user-comments')
   , astroturf = require('../../bin/astroturf')
   , clearDb = require('../../bin/clear-db')
   , db = require('services/collections').db
@@ -6,7 +6,7 @@ var userCommentsView = require('views/user-comments')
   , test = require('tap').test
   ;
 
-test('.userCommentsView()', function (tap) {
+test('.userComments()', function (tap) {
   var commentBody;
   astroturf()
   .then(function (article) {
@@ -20,11 +20,10 @@ test('.userCommentsView()', function (tap) {
       }
       return body;
     }, '');
-    return userCommentsView(userId);
+    return userComments(userId);
   })
-  .then(function (html) {
-    console.log(commentBody, html)
-    tap.ok(html.indexOf(commentBody) > -1, 'adds the user\'s comments');
+  .then(function (data) {
+    tap.ok(data.commentsHtml, 'adds the user\'s comments');
     return clearDb();
   })
   .then(function () {

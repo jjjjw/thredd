@@ -14,6 +14,7 @@
     "browserify": "^5.11.1",
     "clean-css": "^2.2.15",
     "co-body": "^1.0.0",
+    "co-views": "^0.2.0",
     "custom-event-polyfill": "^0.1.1",
     "envify": "^3.0.0",
     "koa": "^0.10.0",

@@ -1,19 +1,19 @@
-var articlesView = require('views/articles')
+var articles = require('views/articles')
   , astroturf = require('../../bin/astroturf')
   , clearDb = require('../../bin/clear-db')
   , db = require('services/collections').db
   , test = require('tap').test
   ;
 
-test('.articlesView()', function (tap) {
+test('.articles()', function (tap) {
   var articleId;
   astroturf()
   .then(function (article) {
     articleId = article;
-    return articlesView(article);
+    return articles();
   })
-  .then(function (html) {
-    tap.ok(html.indexOf('href="/articles/' + articleId) > -1, 'adds links to articles');
+  .then(function (articles) {
+    tap.ok(articles.articles[0], 'fetches all articles');
     return clearDb();
   })
   .then(function () {
