@@ -28,28 +28,14 @@ Most key business logic is implemented by functions. For example, the code that 
 
 ## TODOS
 
-- [x] Astroturf
-- [x] Store/View
-- [x] Post
-- [x] Reply
-- [x] View user comments
-- [x] View articles
-- [x] Comment timestamps/hash fragments
-- [x] moar tests
-- [x] Add License
-- [x] Production Build
-- [x] Comment.thread naming
-- [x] render views more efficiently
-- [x] user error message
-- [x] logging
-- [x] User comments are rendered in the wrong time zone (fixed by UI change)
-- [ ] Optimistic post
-- [x] Animations
+- [ ] Replace Showdown for Markdown support
+- [ ] UI for adding a quote
+- [ ] Scrolling animations(?)
+- [ ] Persist quote ids
 - [ ] User login/logout
+- [ ] Optimistic post
 - [ ] pretty URLs
 - [ ] Stream
-- [ ] Markdown support
 - [ ] browser tests
-- [x] Commit Monk changes
 - [ ] Debug tap & monk db.close()
 - [ ] Debug tap & node --harmony
